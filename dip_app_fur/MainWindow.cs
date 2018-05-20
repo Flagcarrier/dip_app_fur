@@ -48,6 +48,10 @@ public partial class MainWindow : Form
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_dip_furDataSet.order". При необходимости она может быть перемещена или удалена.
+            this.orderTableAdapter.Fill(this.bd_dip_furDataSet.order);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_dip_furDataSet.categories". При необходимости она может быть перемещена или удалена.
+            //this.categoriesTableAdapter.Fill(this.bd_dip_furDataSet.categories);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_dip_furDataSet1.staff". При необходимости она может быть перемещена или удалена.
             this.staffTableAdapter.Fill(this.bd_dip_furDataSet1.staff);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_dip_furDataSet1.staff". При необходимости она может быть перемещена или удалена.
@@ -118,6 +122,24 @@ public partial class MainWindow : Form
         {
             Clients clients = new Clients();
             clients.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Products products = new Products();
+            products.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Staff staff = new Staff();
+            staff.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Shipments shipments = new Shipments();
+            shipments.Show();
         }
     }
 }

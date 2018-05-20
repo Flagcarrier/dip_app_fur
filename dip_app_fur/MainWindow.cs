@@ -141,5 +141,17 @@ public partial class MainWindow : Form
             Shipments shipments = new Shipments();
             shipments.Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            ProductsSold productssold = new ProductsSold();
+            productssold.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Suppliers suppliers = new Suppliers();
+            suppliers.Show();
+        }
     }
 }

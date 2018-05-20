@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.orderBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_dip_furDataSet = new dip_app_fur.bd_dip_furDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -44,40 +46,40 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.orderBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.orderDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.staffBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_dip_furDataSet1 = new dip_app_fur.bd_dip_furDataSet();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bd_dip_furDataSet = new dip_app_fur.bd_dip_furDataSet();
-            this.staffBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bd_dip_furDataSet1 = new dip_app_fur.bd_dip_furDataSet();
             this.orderTableAdapter = new dip_app_fur.bd_dip_furDataSetTableAdapters.orderTableAdapter();
             this.tableAdapterManager = new dip_app_fur.bd_dip_furDataSetTableAdapters.TableAdapterManager();
             this.clientsTableAdapter = new dip_app_fur.bd_dip_furDataSetTableAdapters.clientsTableAdapter();
             this.staffTableAdapter = new dip_app_fur.bd_dip_furDataSetTableAdapters.staffTableAdapter();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingNavigator)).BeginInit();
             this.orderBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_dip_furDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_dip_furDataSet1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_dip_furDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_dip_furDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // orderBindingNavigator
@@ -119,6 +121,16 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // orderBindingSource
+            // 
+            this.orderBindingSource.DataMember = "order";
+            this.orderBindingSource.DataSource = this.bd_dip_furDataSet;
+            // 
+            // bd_dip_furDataSet
+            // 
+            this.bd_dip_furDataSet.DataSetName = "bd_dip_furDataSet";
+            this.bd_dip_furDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -225,10 +237,64 @@
             this.orderDataGridView.ColumnWidthChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.orderDataGridView_ColumnWidthChanged);
             this.orderDataGridView.Scroll += new System.Windows.Forms.ScrollEventHandler(this.orderDataGridView_Scroll);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_order";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Номер договора";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "client_id";
+            this.dataGridViewTextBoxColumn3.DataSource = this.clientsBindingSource;
+            this.dataGridViewTextBoxColumn3.DisplayMember = "fullName";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Заказчик";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn3.ValueMember = "id_client";
+            this.dataGridViewTextBoxColumn3.Width = 80;
+            // 
+            // clientsBindingSource
+            // 
+            this.clientsBindingSource.DataMember = "clients";
+            this.clientsBindingSource.DataSource = this.bd_dip_furDataSet;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "manager_id";
+            this.dataGridViewTextBoxColumn4.DataSource = this.staffBindingSource;
+            this.dataGridViewTextBoxColumn4.DisplayMember = "fullName";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Менеджер";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn4.ValueMember = "id_staff";
+            // 
+            // staffBindingSource
+            // 
+            this.staffBindingSource.DataMember = "staff";
+            this.staffBindingSource.DataSource = this.bd_dip_furDataSet1;
+            // 
+            // bd_dip_furDataSet1
+            // 
+            this.bd_dip_furDataSet1.DataSetName = "bd_dip_furDataSet";
+            this.bd_dip_furDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "date";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Дата регистрации заказа";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Controls.Add(this.button8);
+            this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
@@ -237,6 +303,50 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(246, 415);
             this.panel1.TabIndex = 2;
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button6.Location = new System.Drawing.Point(0, 154);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(246, 40);
+            this.button6.TabIndex = 3;
+            this.button6.Text = "Приход товара";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button5.Location = new System.Drawing.Point(0, 62);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(246, 40);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "Сотрудники";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.Location = new System.Drawing.Point(0, 108);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(246, 40);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "Товары";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.Location = new System.Drawing.Point(0, 16);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(246, 40);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Клиенты";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel2
             // 
@@ -299,42 +409,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Информационная система с рейтинговым распределением заявок";
             // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(0, 16);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(246, 40);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Клиенты";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // clientsBindingSource
-            // 
-            this.clientsBindingSource.DataMember = "clients";
-            this.clientsBindingSource.DataSource = this.bd_dip_furDataSet;
-            // 
-            // bd_dip_furDataSet
-            // 
-            this.bd_dip_furDataSet.DataSetName = "bd_dip_furDataSet";
-            this.bd_dip_furDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // staffBindingSource
-            // 
-            this.staffBindingSource.DataMember = "staff";
-            this.staffBindingSource.DataSource = this.bd_dip_furDataSet1;
-            // 
-            // orderBindingSource
-            // 
-            this.orderBindingSource.DataMember = "order";
-            this.orderBindingSource.DataSource = this.bd_dip_furDataSet;
-            // 
-            // bd_dip_furDataSet1
-            // 
-            this.bd_dip_furDataSet1.DataSetName = "bd_dip_furDataSet";
-            this.bd_dip_furDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // orderTableAdapter
             // 
             this.orderTableAdapter.ClearBeforeFill = true;
@@ -354,6 +428,8 @@
             this.tableAdapterManager.payment_typesTableAdapter = null;
             this.tableAdapterManager.product_listTableAdapter = null;
             this.tableAdapterManager.productsTableAdapter = null;
+            this.tableAdapterManager.shipment_listTableAdapter = null;
+            this.tableAdapterManager.shipmentsTableAdapter = null;
             this.tableAdapterManager.staffTableAdapter = null;
             this.tableAdapterManager.suppliersTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = dip_app_fur.bd_dip_furDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -366,75 +442,27 @@
             // 
             this.staffTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn5
+            // button7
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "date";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Дата регистрации заказа";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button7.Location = new System.Drawing.Point(0, 200);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(246, 40);
+            this.button7.TabIndex = 4;
+            this.button7.Text = "Расшифровка заказа";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // dataGridViewTextBoxColumn4
+            // button8
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "manager_id";
-            this.dataGridViewTextBoxColumn4.DataSource = this.staffBindingSource;
-            this.dataGridViewTextBoxColumn4.DisplayMember = "fullName";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Менеджер";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn4.ValueMember = "id_staff";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "client_id";
-            this.dataGridViewTextBoxColumn3.DataSource = this.clientsBindingSource;
-            this.dataGridViewTextBoxColumn3.DisplayMember = "fullName";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Заказчик";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn3.ValueMember = "id_client";
-            this.dataGridViewTextBoxColumn3.Width = 80;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_order";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Номер договора";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(0, 108);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(246, 40);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Товары";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(0, 62);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(246, 40);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Сотрудники";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(0, 154);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(246, 40);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Приход товара";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button8.Location = new System.Drawing.Point(0, 246);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(246, 40);
+            this.button8.TabIndex = 5;
+            this.button8.Text = "Поставщики";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // MainWindow
             // 
@@ -453,16 +481,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingNavigator)).EndInit();
             this.orderBindingNavigator.ResumeLayout(false);
             this.orderBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_dip_furDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_dip_furDataSet1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_dip_furDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_dip_furDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -506,6 +534,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }
 

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace dip_app_fur
 {
-    public partial class Shipments : Form
+    public partial class Suppliers : Form
     {
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -19,7 +19,7 @@ namespace dip_app_fur
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
-        public Shipments()
+        public Suppliers()
         {
             InitializeComponent();
         }
@@ -34,11 +34,6 @@ namespace dip_app_fur
             this.Close();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -48,32 +43,21 @@ namespace dip_app_fur
             }
         }
 
-        private void shipment_listBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void suppliersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.shipment_listBindingSource.EndEdit();
+            this.suppliersBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.bd_dip_furDataSet);
 
         }
 
-        private void Shipments_Load(object sender, EventArgs e)
+        private void Suppliers_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_dip_furDataSet.countries". При необходимости она может быть перемещена или удалена.
+            this.countriesTableAdapter.Fill(this.bd_dip_furDataSet.countries);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_dip_furDataSet.suppliers". При необходимости она может быть перемещена или удалена.
             this.suppliersTableAdapter.Fill(this.bd_dip_furDataSet.suppliers);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_dip_furDataSet.shipments". При необходимости она может быть перемещена или удалена.
-            this.shipmentsTableAdapter.Fill(this.bd_dip_furDataSet.shipments);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_dip_furDataSet.products". При необходимости она может быть перемещена или удалена.
-            this.productsTableAdapter.Fill(this.bd_dip_furDataSet.products);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_dip_furDataSet.shipment_list". При необходимости она может быть перемещена или удалена.
-            this.shipment_listTableAdapter.Fill(this.bd_dip_furDataSet.shipment_list);
 
-        }
-
-        private void toolStripButton7_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.shipmentsBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.bd_dip_furDataSet);
         }
     }
 }

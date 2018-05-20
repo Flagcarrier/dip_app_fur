@@ -153,5 +153,20 @@ public partial class MainWindow : Form
             Suppliers suppliers = new Suppliers();
             suppliers.Show();
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            FinReport finreport = new FinReport();
+            finreport.Show();
+        }
+
+        private void label1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
     }
 }

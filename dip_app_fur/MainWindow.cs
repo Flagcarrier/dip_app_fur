@@ -50,6 +50,8 @@ public partial class MainWindow : Form
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_dip_furDataSet1.staff". При необходимости она может быть перемещена или удалена.
             this.staffTableAdapter.Fill(this.bd_dip_furDataSet1.staff);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_dip_furDataSet1.staff". При необходимости она может быть перемещена или удалена.
+            this.staffTableAdapter.Fill(this.bd_dip_furDataSet1.staff);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_dip_furDataSet.clients". При необходимости она может быть перемещена или удалена.
             this.clientsTableAdapter.Fill(this.bd_dip_furDataSet.clients);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_dip_furDataSet.clients". При необходимости она может быть перемещена или удалена.
@@ -110,6 +112,12 @@ public partial class MainWindow : Form
         private void button1_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Clients clients = new Clients();
+            clients.Show();
         }
     }
 }
